@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Greate from './components/Great';
+import Person from './components/Person';
+import PersonList from './components/PersonList';
 
 function App() {
+  const fullName = {
+    firstName: 'Islombek',
+    lastName: 'Qurbonov'
+  }
+
+  const fullNames = [
+    {
+      firstName: 'Elbek',
+      lastName: 'Musayev'
+    },
+    {
+      firstName: 'Muslim',
+      lastName: 'Pardayev'
+    },
+    {
+      firstName: 'Eshon',
+      lastName: 'Abdulazizov'
+    },
+    {
+      firstName: 'Abbos',
+      lastName: 'Dusqulov'
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greate name='Islombek' age={21} isLogin={false} />
+      <Person fullName={fullName} />
+      <PersonList fullNames={fullNames} />
     </div>
   );
 }
