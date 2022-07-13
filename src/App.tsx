@@ -11,6 +11,9 @@ import Input from './components/Input';
 import Counter from './components/state/Counter';
 import ThemeBox from './context/ThemBox';
 import User from './context/User';
+import MutableRef from './ref/MutableRef';
+import Private from './auth/Private';
+import Profile from './auth/Profile';
 import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
 import { UserContextProvider } from './context/User/UserContext';
 
@@ -41,6 +44,8 @@ function App() {
 
   return (
     <div className="App">
+      <Private isLoginIn={true} component={Profile} />
+
       <ThemeContextProvider>
         <ThemeBox />
       </ThemeContextProvider>
@@ -48,6 +53,8 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+
+      <MutableRef />
       
       <Greate name='Islombek' age={21} />
       
