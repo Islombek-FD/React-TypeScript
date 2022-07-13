@@ -10,7 +10,9 @@ import Button from './components/Button';
 import Input from './components/Input';
 import Counter from './components/state/Counter';
 import ThemeBox from './context/ThemBox';
+import User from './context/User';
 import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
+import { UserContextProvider } from './context/User/UserContext';
 
 function App() {
   const fullName = {
@@ -39,6 +41,14 @@ function App() {
 
   return (
     <div className="App">
+      <ThemeContextProvider>
+        <ThemeBox />
+      </ThemeContextProvider>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      
       <Greate name='Islombek' age={21} />
       
       <Person fullName={fullName} />
@@ -64,10 +74,6 @@ function App() {
       <Input changeHandler={(e) => console.log(e.target.value)} />
 
       <Counter />
-
-      <ThemeContextProvider>
-        <ThemeBox />
-      </ThemeContextProvider>
     </div>
   );
 }
