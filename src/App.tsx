@@ -8,6 +8,7 @@ import Heading from './components/Heading';
 import Box from './components/Box';
 import Button from './components/Button';
 import Input from './components/Input';
+import Counter from './components/state/Counter';
 
 function App() {
   const fullName = {
@@ -59,6 +60,8 @@ function App() {
       </Button>
 
       <Input changeHandler={(e) => console.log(e.target.value)} />
+
+      <Counter />
     </div>
   );
 }
