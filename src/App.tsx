@@ -9,6 +9,8 @@ import Box from './components/Box';
 import Button from './components/Button';
 import Input from './components/Input';
 import Counter from './components/state/Counter';
+import ThemeBox from './context/ThemBox';
+import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
 
 function App() {
   const fullName = {
@@ -62,6 +64,10 @@ function App() {
       <Input changeHandler={(e) => console.log(e.target.value)} />
 
       <Counter />
+
+      <ThemeContextProvider>
+        <ThemeBox />
+      </ThemeContextProvider>
     </div>
   );
 }
