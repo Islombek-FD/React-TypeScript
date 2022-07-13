@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 type BoxProps = {
-   children: React.ReactNode
+  style: CSSProperties
+  children: React.ReactNode
 }
 
 function Box(props: BoxProps) {
   return (
-    <div>
+    <div style={props.style}>
       {props.children}
     </div>
   )
