@@ -1,12 +1,12 @@
 import React from 'react';
 
-type GreateProps = {
+type GreatProps = {
    name: string
    age: number
    isLogin?: boolean
 }
 
-function Greate(props: GreateProps) {
+function Great(props: GreatProps) {
   const { isLogin = true } = props;
 
   return (
@@ -21,4 +21,4 @@ function Greate(props: GreateProps) {
   )
 }
 
-export default Greate;
+export default Great;

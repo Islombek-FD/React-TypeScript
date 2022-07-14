@@ -16,6 +16,9 @@ import Private from './auth/Private';
 import Profile from './auth/Profile';
 import List from './genirics/List';
 import RandomNamber from './restriction';
+import Toast from './components/Toast';
+import CustomInput from './html/Input';
+import CustomButton from './html/Button';
 import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
 import { UserContextProvider } from './context/User/UserContext';
 
@@ -49,6 +52,16 @@ function App() {
       {/* <List items={['Islombek', 'Eshon']} clickHandler={((value) => console.log(value))} />
 
       <List items={[2001, 2003]} clickHandler={((value) => console.log(value))} /> */}
+
+      <CustomInput defaultValue='example value' />
+
+      <CustomButton variant='primary'>
+        <div>
+          ksjhsa
+        </div>
+      </CustomButton>
+
+      <Toast position='center-bottom' />
 
       <RandomNamber value={10} isPositive />
 
