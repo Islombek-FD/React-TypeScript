@@ -14,6 +14,7 @@ import User from './context/User';
 import MutableRef from './ref/MutableRef';
 import Private from './auth/Private';
 import Profile from './auth/Profile';
+import List from './genirics/List';
 import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
 import { UserContextProvider } from './context/User/UserContext';
 
@@ -44,6 +45,19 @@ function App() {
 
   return (
     <div className="App">
+      {/* <List items={['Islombek', 'Eshon']} clickHandler={((value) => console.log(value))} />
+
+      <List items={[2001, 2003]} clickHandler={((value) => console.log(value))} /> */}
+
+      <List items={[{
+        id: 1,
+        first: 'Islombek'
+      }, {
+        id: 2,
+        first: 'Eshon'
+      }]} 
+      clickHandler={((value) => console.log(value))} />
+
       <Private isLoginIn={true} component={Profile} />
 
       <ThemeContextProvider>
