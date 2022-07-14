@@ -15,6 +15,7 @@ import MutableRef from './ref/MutableRef';
 import Private from './auth/Private';
 import Profile from './auth/Profile';
 import List from './genirics/List';
+import RandomNamber from './restriction';
 import { ThemeContextProvider } from './context/ThemBox/ThemeContext';
 import { UserContextProvider } from './context/User/UserContext';
 
@@ -48,6 +49,8 @@ function App() {
       {/* <List items={['Islombek', 'Eshon']} clickHandler={((value) => console.log(value))} />
 
       <List items={[2001, 2003]} clickHandler={((value) => console.log(value))} /> */}
+
+      <RandomNamber value={10} isPositive />
 
       <List items={[{
         id: 1,
